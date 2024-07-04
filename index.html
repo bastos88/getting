@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Travel</title>
+
+    <!-- External Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="intro" class="bg-image">
+        <nav class="navbar">
+            <a href="https://gettingtravel.com" class="logo">
+                <img src="./img/logow.png" alt="logo-bg" height="60px">
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#">Minha Reserva</a></li>
+                <li class="nav-item"><a href="#">Faq</a></li>
+                <li class="nav-item"><a href="#">Sobre</a></li>
+            </ul>
+            <div class="language-selector">
+                <label for="language-select">Select Language:</label>
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="header">
+            <div class="column-left">
+                <h1>Reserva já <br> a sua viagem!</h1>
+                <span>Transfers do aeroporto do Porto</span>
+            </div>
+            <div class="column-right">
+                <div class="contain rounded shadow-sm">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-md-3 pe-0 col-sm-12">
+                                <div class="btn radio-btn mb-3">
+                                    <label class="radio">
+                                        <input type="radio" value="a" name="book"> Ida <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 pe-0 col-sm-12">
+                                <div class="btn radio-btn mb-3">
+                                    <label class="radio">
+                                        <input type="radio" value="a" name="book"> Ida e volta <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-12 mb-4">
+                                <div class="form-control d-flex flex-column">
+                                    <p class="h-blue">FLYING FROM</p>
+                                    <input class="inputbox" placeholder="City or Airport" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 mb-4">
+                                <div class="form-control d-flex flex-column">
+                                    <p class="h-blue">FLYING TO</p>
+                                    <input class="inputbox" placeholder="City or Airport" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-12 mb-4">
+                                <div class="form-control d-flex flex-column">
+                                    <p class="h-blue">DEPARTING</p>
+                                    <input class="inputbox textmuted" type="date">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 mb-4">
+                                <div class="form-control d-flex flex-column">
+                                    <p class="h-blue">RETURNING</p>
+                                    <input class="inputbox textmuted" type="date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="form-control d-flex flex-column">
+                                    <p class="h-blue">ADULTS</p>
+                                    <select class="border-0 outline-none">
+                                        <option value="" hidden selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-control d-flex flex-column">
+                                    <p class="h-blue">CHILDREN(0-9)</p>
+                                    <select class="border-0 outline-none">
+                                        <option value="" hidden selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-control d-flex flex-column">
+                                    <p class="h-blue">TRAVEL CLASS</p>
+                                    <select class="border-0 outline-none">
+                                        <option value="" hidden selected>Class</option>
+                                        <option value="1">Economy</option>
+                                        <option value="2">Premium</option>
+                                        <option value="3">Business</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn btn-primary form-control text-center">Pesquisar</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <article class="about-us">
+        <div class="about-box">
+            <ul class="about-list">
+                <li>Recolha Garantida</li>
+                <li>Motoristas Profissionais</li>
+                <li>Cancelamento Gratuito</li>
+            </ul>
+        </div>
+    </article>
+
+    <section class="services" data-anime="scroll" id="solucoes">
+        <div>
+            <div>
+                <h1>Por que escolher a Getting <span>Travel?</span></h1>
+            </div>
+            <div class="container-getting">
+                <div class="card-1">
+                    <div class="box">
+                        <div class="content">
+                            <img src="./img/handshake.png" alt="">
+                            <h3>Meet & Greet</h3>
+                            <p>O seu motorista estará à sua espera, aconteça o que acontecer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-1">
+                    <div class="box">
+                        <div class="content">
+                            <img src="./img/clock.png" alt="">
+                            <h3>Confiável</h3>
+                            <p>Sem filas, sem atrasos - vamos levá-lo até seu destino rapidamente</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-1">
+                    <div class="box">
+                        <div class="content">
+                            <img src="./img/door.png" alt="">
+                            <h3>Door-to-door</h3>
+                            <p>Para uma paz de espírito total, vamos levá-lo diretamente à porta do seu hotel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-1">
+                    <div class="box">
+                        <div class="content">
+                            <img src="./img/offer.png" alt="">
+                            <h3>Value</h3>
+                            <p>Tire partido de um serviço de transfer de mais elevada qualidade a preços surpreendemente
+                                baixos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quem-somos">
+        <div data-anime="scroll" id="sobre">
+            <div>
+                <h1>um veículo para cada ocasião</h1>
+                <div>
+                    <p>Desde o mais económico ao mais luxuoso. Precise do que precisar, temos a opção certa para si..
+                    </p>
+                </div>
+            </div>
+            <div class="frota">
+                <div>
+                    <img src="./img/standard.png" alt="Standard">
+                </div>
+                <div>
+                    <img src="./img/executivo.png" alt="Executivo">
+                </div>
+                <div>
+                    <img src="./img/minivan.png" alt="Minivan">
+                </div>
+                <div>
+                    <img src="./img/miniexec.png" alt="Miniexec">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="testimonials text-center">
+            <div class="container">
+                <h3>O que dizem sobre nós</h3>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-light bg-light text-center">
+                            <i class="fa fa-quote-left fa-3x card-img-top rounded-circle" aria-hidden="true"></i>
+                            <div class="card-body blockquote">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                                    bibendum enim eu nibh finibus</p>
+                                <footer class="blockquote-footer"><cite title="Source Title">Mohamed Nady</cite>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-light bg-light text-center">
+                            <i class="fa fa-quote-left fa-3x card-img-top rounded-circle" aria-hidden="true"></i>
+                            <div class="card-body blockquote">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                                    bibendum enim eu nibh finibus</p>
+                                <footer class="blockquote-footer"><cite title="Source Title">Mohamed Reda</cite>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-light bg-light text-center">
+                            <i class="fa fa-quote-left fa-3x card-img-top rounded-circle" aria-hidden="true"></i>
+                            <div class="card-body blockquote">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                                    bibendum enim eu nibh finibus</p>
+                                <footer class="blockquote-footer"><cite title="Source Title">Mohamed Atef</cite>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-section about">
+                    <h3 class="footer-section-title">Sobre</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum felis vel justo
+                        placerat, in finibus tortor dapibus.</p>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 footer-section links">
+                    <h3 class="footer-section-title">Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 footer-section contact">
+                    <h3 class="footer-section-title">Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua Rosas 166, Maia - Porto </p>
+                    <p><i class="fas fa-phone"></i> +55 123 456 789</p>
+                    <p><i class="fas fa-envelope"></i> getting@gettingtravel.com</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; Getting Travel. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIqJyyiFopDje8fFZp4l1WIp0iFywD1/yo6InW44dbf8203in59"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-+esop1STdM2iIcGka7fKx1V6u6e7HQZZi8E7JxlA4j+oaXpjFy5EdF+C0d1MC1kE"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

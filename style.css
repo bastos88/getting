@@ -1,0 +1,488 @@
+:root {
+    --white: #ffffff;
+    --cinza: #181e29;
+    --amarelo: #f7941d;
+    --azul: #152f4f;
+    --h-blue: #49bff5;
+    --bg-content: #f9f9f9;
+    --border-content: #ccc;
+    --text-muted: #ddd;
+    --highlight: #ed1c24;
+    --hover-link: #4180cb;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: url("./img/bg-get.jpg") no-repeat center;
+    text-align: center;
+}
+
+*,
+::before,
+::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.language-selector {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+#content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid var(--border-content);
+    border-radius: 8px;
+    background-color: var(--bg-content);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    text-indent: -8%;
+    color: var(--white);
+}
+
+.header span {
+    font-size: 1rem;
+    text-indent: -8%;
+    color: var(--white);
+}
+
+.contain {
+    background-color: var(--cinza);
+    margin: auto;
+    padding: 5px 5px;
+    max-width: 340px;
+}
+.column-right {
+    margin-bottom: 50px;
+}
+.row {
+    text-align: left;
+    margin-top: calc(var(--bs-gutter-y) * 1);
+    margin-right: calc(var(--bs-gutter-x) / 1);
+    margin-left: calc(var(--bs-gutter-x) / 2);
+}
+
+.inputbox {
+    border: none;
+    outline: none;
+}
+
+.h-blue {
+    color: var(--h-blue);
+    margin-bottom: 5px;
+    padding-left: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+::placeholder {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+.textmuted {
+    color: var(--text-muted);
+}
+
+.radio {
+    display: inline-block;
+    margin-left: 13px;
+    color: var(--white);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn.radio-btn {
+    position: relative;
+}
+
+.radio input[type="radio"] {
+    display: none;
+    color: var(--white);
+}
+
+.radio span {
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--text-muted);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+.radio span::after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: var(--amarelo);
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: 300ms ease-in-out 0s;
+}
+
+.radio input[type="radio"]:checked ~ span::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.form-control {
+    padding: 0.075rem 1.75rem;
+}
+
+.outline-none {
+    outline: none;
+}
+
+.btn.btn-primary {
+    height: 50px;
+    border: none;
+    background-color: var(--amarelo);
+    font-size: 20px;
+    padding: 10px;
+}
+
+.about-us {
+    padding: 2rem 1rem;
+    background: var(--cinza);
+}
+
+.about-box {
+    margin: 0 auto;
+    text-align: justify;
+    width: 75%;
+}
+
+.about-us ul {
+    list-style: none;
+}
+
+.about-us ul li::before {
+    content: "";
+    background-image: url("/img/icon-check.png");
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px -5px 0px;
+    display: inline-block;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.about-us li {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.services {
+    background: #202a39;
+}
+
+.services,
+.carfleet {
+    padding: 2rem 1rem;
+}
+
+.services h1 {
+    color: var(--amarelo);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.services span {
+    color: var(--highlight);
+}
+
+.container-getting {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.card-1 {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 1rem;
+}
+
+.card-1 img {
+    width: 30%;
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+.card-1 h3 {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--amarelo);
+}
+
+.card-1 p {
+    text-align: center;
+    color: var(--white);
+}
+
+/* quem somos */
+
+.quem-somos {
+    background: var(--cinza);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.quem-somos h1 {
+    font-size: 2.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--amarelo);
+    margin-bottom: 20px;
+}
+
+.quem-somos p {
+    font-size: 1.125em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.frota {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.frota div {
+    flex-basis: calc(50% - 20px);
+    max-width: 200px;
+}
+
+.frota img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.testimonials {
+    padding: 100px 0;
+}
+
+.testimonials h3 {
+    margin-bottom: 20px;
+}
+
+.testimonials .card {
+    border-bottom: 3px var(--cinza) solid !important;
+    transition: 0.5s;
+    margin-top: 60px;
+}
+
+.testimonials .card i {
+    background-color: var(--amarelo);
+    color: var(--white);
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    margin: -40px auto 0 auto;
+}
+
+/* footer */
+
+.site-footer {
+    background-color: var(--azul);
+    color: var(--white);
+    padding: 60px 0;
+    font-family: Arial, sans-serif;
+}
+
+.site-footer .footer-section {
+    margin-bottom: 30px;
+}
+
+.site-footer .footer-section-title {
+    color: var(--white);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.site-footer p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+.site-footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.site-footer ul li {
+    margin-bottom: 10px;
+}
+
+.site-footer ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.site-footer ul li a:hover {
+    color: var(--hover-link);
+}
+
+.site-footer .social-icons {
+    margin-top: 10px;
+}
+
+.site-footer .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.site-footer .social-icons li a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.site-footer .social-icons li a:hover {
+    color: var(--hover-link);
+}
+
+.site-footer .contact p {
+    margin-bottom: 10px;
+}
+
+.site-footer .contact i {
+    margin-right: 10px;
+}
+
+/* Desktop */
+
+@media (min-width: 768px) {
+    header {
+        background: url("./img/bg-get.jpg") no-repeat center;
+        height: 600px;
+        text-align: center;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .column-left,
+    .column-right {
+        flex: 1;
+        padding: 1rem;
+    }
+
+    .column-left h1 {
+        font-size: 3rem;
+    }
+
+    .column-left span {
+        font-size: 1.5rem;
+    }
+
+    .contain {
+        max-width: 550px;
+    }
+
+    .form-control {
+        padding: 0.075rem;
+    }
+
+    .btn.btn-primary {
+        height: 60px;
+        border: none;
+        background-color: var(--amarelo);
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .info input,
+    .info select,
+    .info button {
+        width: 40%;
+    }
+
+    .card-1 {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    .about-us ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .about-us li {
+        margin-bottom: 0;
+    }
+
+    .carousel-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .frota div {
+        flex-basis: calc(25% - 20px);
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-1 {
+        flex: 1 1 22%;
+        max-width: 22%;
+    }
+}
